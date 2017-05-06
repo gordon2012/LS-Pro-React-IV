@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Grid, Jumbotron } from 'react-bootstrap';
+import { Grid, Jumbotron, Navbar, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import styled from 'styled-components';
 
 import About from './components/About';
@@ -24,14 +25,18 @@ export default class extends Component {
     return (
       <Router>
         <Grid>
-          <header>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/hobbies">Hobbies</Link></li>
-              <li><Link to="/media">Media</Link></li>
-            </ul>
-          </header>
+          <Navbar>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link to="/">Me</Link>
+              </Navbar.Brand>
+            </Navbar.Header>
+            <Nav>
+              <LinkContainer to="/about"><NavItem eventKey={1}>About</NavItem></LinkContainer>
+              <LinkContainer to="/hobbies"><NavItem eventKey={2}>Hobbies</NavItem></LinkContainer>
+              <LinkContainer to="/media"><NavItem eventKey={3}>Media</NavItem></LinkContainer>
+            </Nav>
+          </Navbar>
           <Route exact path="/" component={Home} ></Route>
           <Route path="/about" component={About}></Route>
           <Route path="/hobbies" component={Hobbies}></Route>
