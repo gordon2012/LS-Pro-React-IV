@@ -5,11 +5,17 @@
 1. Feynman Writing Prompts - Write out explanations of the following concepts like you are explaining it to a 12 year old.  Doing this will help you quickly discover any holes in your understanding.  Ask your questions on Slack.
 
   * `debugger`
+    - debugger is a command in JavaScript that activates the browser's debug mode in the developer tools, allowing the code to be stepped through line by line
   * react router
+    - react router is the latest in a long line of attempts to create routing for React. It is finally free of url artifacts such as extra '#'s and '?'s
   * `<Router />` (BrowserRouter)
+    - BrowserRouter is the routing root component that allows routing to take place. It must contain a single child object, which will contain any needed navigation and the route targets
   * `<Route />`
+    - Route is the route target that is identified by path="" and any children inside are displayed when the url matches the route's path
   * `<Link />`
+    - Link is a replacement for the a tag that allows navigation to routes by changing the url so the required Route will display
   * `npm` and `npm install`
+    - npm does not stand for Node Package Manager, even though it seems like it should. It is a dependency management system for JavaScript for both the back and front ends. npm install reads the `package.json` and installs all the packages that are listed, as well as all the required dependencies for those packages.
 
 
 2. Fork and clone this repo.
